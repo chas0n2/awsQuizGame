@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Cloud Practitioner Quiz (Millionaire Style!)</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>AWS Cloud Practitioner Quiz (Millionaire Style!)</h1>
+        <p>Test Your AWS Cloud Practitioner Knowledge!</p>
+    </header>
+
+    <main>
+        <section class="question">
+            <h2 id="questionNumber">Question 1</h2>
+            <p id="questionText">What is the primary purpose of Amazon EC2?</p>
+            <div class="button-container">
+                <button id="optionA">A) Object Storage</button>
+                <button id="optionB">B) Virtual Servers</button>
+                <button id="optionC">C) DNS Management</button>
+                <button id="optionD">D) Load Balancing</button>
+            </div>
+        </section>
+
+        <section class="lifelines">
+            <h3>Lifelines</h3>
+            <button id="fiftyFifty">50/50</button>
+            <button id="askAudience">Ask the Audience</button>
+            <button id="phoneAFriend">Phone a Friend</button>
+        </section>
+
+        <section class="feedback">
+            <p id="feedbackMessage"></p>
+        </section>
+
+        <section class="results" style="display: none;">
+            <h3>Results</h3>
+            <p id="resultsMessage"></p>
+            <button id="playAgain">Play Again</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 cLaw Games Inc.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
