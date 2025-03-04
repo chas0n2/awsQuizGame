@@ -21,6 +21,13 @@ main {
     padding: 20px;
 }
 
+/* Centering the instructions section */
+#instructions {
+    text-align: center; /* Center text */
+    margin: 20px; /* Add some margin for spacing */
+}
+
+/* Question Section */
 .question {
     background-color: #4B0082; /* Dark purple for question section */
     border-radius: 5px;
@@ -29,14 +36,27 @@ main {
     margin-bottom: 20px;
 }
 
+/* Centering the question number */
 .question h2 {
     margin-top: 0;
+    text-align: center; /* Center the question number */
 }
 
+/* Centering the lifeline section */
+.lifelines {
+    text-align: center; /* Center text */
+    margin: 20px; /* Add some margin for spacing */
+}
+
+/* Centering the buttons */
 .button-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two columns */
-    gap: 10px; /* Space between buttons */
+    display: flex; /* Use flexbox for button layout */
+    justify-content: center; /* Center buttons horizontally */
+    flex-wrap: wrap; /* Allow buttons to wrap if needed */
+}
+
+.button-container button {
+    margin: 5px; /* Add some space between buttons */
 }
 
 button {
@@ -53,10 +73,6 @@ button:hover {
     background-color: #FFC107; /* Lighter gold on hover */
 }
 
-.lifelines {
-    margin-bottom: 20px;
-}
-
 footer {
     text-align: center;
     padding: 10px;
@@ -66,6 +82,7 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
 #playAgain {
     display: block; /* Make it a block element for centering */
     margin: 20px auto; /* Center it horizontally with auto margins */
@@ -80,5 +97,5 @@ footer {
 }
 
 #playAgain:hover {
-    background-color: #6A0DAD; /* Darker green on hover */
+    background-color: #6A0DAD; /* Darker purple on hover */
 }
