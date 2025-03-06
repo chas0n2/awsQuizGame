@@ -6,53 +6,67 @@
     <title>AWS Cloud Practitioner Quiz (Millionaire Style!)</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
-<body>
-    <header>
-        <h1>AWS Cloud Practitioner Quiz (Millionaire Style!)</h1>
-        <p>Test Your AWS Cloud Practitioner Knowledge!</p>
+<body class="bg-gray-900 text-white flex items-center justify-center min-h-screen">
+    <header class="text-center mb-8 flex justify-center">
+        <div>
+            <h1 class="text-3xl font-bold">AWS Cloud Practitioner Quiz</h1>
+            <p>Test Your AWS Cloud Practitioner Knowledge!</p>
+        </div>
     </header>
 
-    <main>
+    <main class="text-center">
         <!-- Instructions Section -->
-        <section id="instructions">
-            <h3>Instructions:</h3>
-            <ul>
+        <section class="text-center mb-8 flex justify-center" id="instructions" class="mb-8">
+            <h3 class="text-xl">Instructions:</h3>
+            <ul class="list-disc list-inside">
                 <li>Choose the correct answer from the options provided.</li>
                 <li>You have 3 lifelines to help you: 50/50, Ask the Audience, and Phone a Friend.</li>
                 <li>Good luck!</li>
             </ul>
         </section>
-        <section class="question">
-            <h2 id="questionNumber">Question 1</h2>
-            <p id="questionText">What is the primary purpose of Amazon EC2?</p>
-            <div class="button-container">
-                <button id="optionA">A) Object Storage</button>
-                <button id="optionB">B) Virtual Servers</button>
-                <button id="optionC">C) DNS Management</button>
-                <button id="optionD">D) Load Balancing</button>
+
+        <section class="question mb-8">
+            <h2 id="questionNumber" class="text-2xl">Question 1</h2>
+            <div class="bg-purple-800 rounded-full py-4 px-8 mb-4 inline-block">
+                <p id="questionText" class="text-lg">What is the primary purpose of Amazon EC2?</p>
+            </div>
+            <div class="button-container grid grid-cols-1 md:grid-cols-2 gap-4">
+                <button id="optionA" class="bg-purple-800 rounded-full py-4 px-8">A) Object Storage</button>
+                <button id="optionB" class="bg-purple-800 rounded-full py-4 px-8">B) Virtual Servers</button>
+                <button id="optionC" class="bg-purple-800 rounded-full py-4 px-8">C) DNS Management</button>
+                <button id="optionD" class="bg-purple-800 rounded-full py-4 px-8">D) Load Balancing</button>
             </div>
         </section>
 
-        <section class="lifelines">
-            <h3>Lifelines</h3>
-            <button id="fiftyFifty">50/50</button>
-            <button id="askAudience">Ask the Audience</button>
-            <button id="phoneAFriend">Phone a Friend</button>
+        <section class="lifelines mb-8">
+            <h3 class="text-xl">Lifelines</h3>
+            <div class="flex justify-center space-x-4">
+                <button id="fiftyFifty" class="bg-purple-800 rounded-full p-4">
+                    <i class="fas fa-percentage"></i> 50/50
+                </button>
+                <button id="askAudience" class="bg-purple-800 rounded-full p-4">
+                    <i class="fas fa-users"></i> Ask the Audience
+                </button>
+                <button id="phoneAFriend" class="bg-purple-800 rounded-full p-4">
+                    <i class="fas fa-phone"></i> Phone a Friend
+                </button>
+            </div>
         </section>
 
-        <section class="feedback">
+        <section class="feedback mb-4">
             <p id="feedbackMessage"></p>
         </section>
 
         <section class="results" style="display: none;">
-            <h3>Results</h3>
+            <h3 class="text-xl">Results</h3>
             <p id="resultsMessage"></p>
-            <button id="playAgain">Play Again</button>
+            <button id="playAgain" class="bg-purple-800 rounded-full p-4 mt-4">Play Again</button>
         </section>
     </main>
 
-    <footer>
+    <footer class="text-center p-4 bg-purple-800">
         <p>&copy; 2025 cLaw Games Inc.</p>
     </footer>
 
