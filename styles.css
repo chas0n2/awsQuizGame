@@ -11,6 +11,8 @@ header {
     color: white;
     padding: 20px;
     text-align: center;
+    border-radius: 10px; /* Rounded edges */
+    margin:20 20px; /* Margins on the sides */
 }
 
 h1 {
@@ -66,13 +68,20 @@ button:hover {
 
 footer {
     text-align: center;
-    padding: 10px;
+    padding: 0px; /* Reduced padding for a thinner footer */
     background-color: #6A0DAD; /* Purple footer */
     color: white;
     position: fixed;
     bottom: 0;
     width: 100%;
+    border-radius: 10px; /* Rounded edges */
+    margin:20 20px; /* Margins on the sides */
 }
+
+footer p {
+    font-size: 0.8em; /* Optional: Smaller font size for footer text */
+}
+
 #playAgain {
     display: block; /* Make it a block element for centering */
     margin: 20px auto; /* Center it horizontally with auto margins */
