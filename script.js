@@ -338,6 +338,14 @@ document.getElementById('playAgain').addEventListener('click', () => {
     correctAnswersCount = 0;
     incorrectAnswers = [];
 
+    // Reset the display of the lifeline buttons
+    document.getElementById('fiftyFifty').disabled = false;
+    document.getElementById('fiftyFifty').style.display = 'inline-block';
+    document.getElementById('askAudience').disabled = false;
+    document.getElementById('askAudience').style.display = 'inline-block';
+    document.getElementById('phoneAFriend').disabled = false;
+    document.getElementById('phoneAFriend').style.display = 'inline-block';
+
     document.querySelector('.results').style.display = 'none';
     document.querySelector('.question').style.display = 'block';
     document.querySelector('.lifelines').style.display = 'block';
