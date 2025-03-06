@@ -198,11 +198,29 @@ const questions = [
 
 // Scoring structure based on the number of correct answers
 const scoreValues = [
-    100, 200, 300, 500, 1000, 
-    2000, 4000, 8000, 16000, 
-    25000, 50000, 100000, 
-    250000, 500000, 1000000
+    0,          // 0 correct answers
+    100,       // 1 correct answer
+    100,       // 2 correct answers
+    200,       // 3 correct answers
+    200,       // 4 correct answers
+    300,       // 5 correct answers
+    300,       // 6 correct answers
+    500,       // 7 correct answers
+    1000,      // 8 correct answers
+    2000,      // 9 correct answers
+    4000,      // 10 correct answers
+    8000,      // 11 correct answers
+    16000,     // 12 correct answers
+    25000,     // 13 correct answers
+    50000,     // 14 correct answers
+    100000,    // 15 correct answers
+    250000,    // 16 correct answers
+    500000,    // 17 correct answers
+    1000000    // 18+ correct answers
 ];
+
+// Initialize high score variable
+let highScore = 0; // This will reset on page refresh
 
 let currentQuestionIndex = 0;
 let lifelinesUsed = {
@@ -258,15 +276,24 @@ const showResults = () => {
     // Calculate the score based on correct answers
     let score = 0;
 
-    // Ensure we only calculate score for the number of correct answers
-    for (let i = 0; i < correctAnswersCount; i++) {
-        if (i < scoreValues.length) {
-            score += scoreValues[i]; // Add the corresponding score value
+    // Check if the player answered all questions correctly
+    if (correctAnswersCount === questions.length) {
+        score = 1000000; // Award $1,000,000 for 38 correct answers
+    } else {
+        // Determine the score based on the number of correct answers
+        if (correctAnswersCount >= 0 && correctAnswersCount < scoreValues.length) {
+            score = scoreValues[correctAnswersCount]; // Get the score for the number of correct answers
         }
     }
 
+    // Check for new high score
+    if (score > highScore) {
+        highScore = score; // Update high score
+    }
+
     resultsMessage.innerText = `You answered ${correctAnswersCount} out of ${questions.length} questions correctly.`;
-    resultsMessage.innerText += `\nYour total score is: $${score.toLocaleString()}`; // Format the score with commas
+    resultsMessage.innerText += `\nYour total score is: $${score.toLocaleString()}`;
+    resultsMessage.innerText += `\nYour highest score this session is: $${highScore.toLocaleString()}`; // Display high score
 
     if (incorrectAnswers.length > 0) {
         resultsMessage.innerText += `\nYou missed the following questions: ${incorrectAnswers.join(', ')}`;
