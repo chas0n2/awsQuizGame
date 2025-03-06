@@ -196,6 +196,14 @@ const questions = [
     }
 ];
 
+// Scoring structure based on the number of correct answers
+const scoreValues = [
+    100, 200, 300, 500, 1000, 
+    2000, 4000, 8000, 16000, 
+    25000, 50000, 100000, 
+    250000, 500000, 1000000
+];
+
 let currentQuestionIndex = 0;
 let lifelinesUsed = {
     fiftyFifty: false,
@@ -246,7 +254,20 @@ const showResults = () => {
     document.querySelector('.lifelines').style.display = 'none';
     document.querySelector('.feedback').style.display = 'none';
     document.querySelector('.results').style.display = 'block';
+
+    // Calculate the score based on correct answers
+    let score = 0;
+
+    // Ensure we only calculate score for the number of correct answers
+    for (let i = 0; i < correctAnswersCount; i++) {
+        if (i < scoreValues.length) {
+            score += scoreValues[i]; // Add the corresponding score value
+        }
+    }
+
     resultsMessage.innerText = `You answered ${correctAnswersCount} out of ${questions.length} questions correctly.`;
+    resultsMessage.innerText += `\nYour total score is: $${score.toLocaleString()}`; // Format the score with commas
+
     if (incorrectAnswers.length > 0) {
         resultsMessage.innerText += `\nYou missed the following questions: ${incorrectAnswers.join(', ')}`;
     }
@@ -335,7 +356,7 @@ document.getElementById('playAgain').addEventListener('click', () => {
         askAudience: false,
         phoneAFriend: false
     };
-    correctAnswersCount = 0;
+    correctAnswersCount = 0; // Reset the correct answers count
     incorrectAnswers = [];
 
     // Reset the display of the lifeline buttons
