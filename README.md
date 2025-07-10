@@ -14,6 +14,7 @@ o	Become familiar with the game rules and mechanics.
 •	Answer Questions:
 o	The game will present you with multiple-choice questions. Read each question and carefully select your answer by clicking on the corresponding button.
 •	Track Progress and View Results:
-o	Once all the questions have been answered you will be met with some confetti, congratulating you on completing the quiz along with the results and progress. A score based on the number of correct answers, another score with a $ amount indicating how much you’ve won, and which questions you missed.
+	Once all the questions have been answered you will be met with some confetti, congratulating you on completing the quiz along with the results and progress. A score based on the number of correct answers, another score with a $ amount indicating how much you’ve won, and which questions you missed.
 •	Play Again:
-o	If you would like to try again there is a button that will reset the game and start a new quiz. This will also keep track of your highest score. To reset the entire game, you will need to refresh the webpage.
+o	If you would like to try again there is a button that will reset the game and start a new quiz. This will also keep track of your highest score. 
+To reset the entire game, you will need to refresh the webpage.
