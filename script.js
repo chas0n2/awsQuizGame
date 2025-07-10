@@ -195,7 +195,7 @@ const questions = [
         correct: "A) 1"
     }
 ];
-
+// 
 // Scoring structure based on the number of correct answers
 const scoreValues = [
     0,          // 0 correct answers
@@ -218,7 +218,7 @@ const scoreValues = [
     500000,    // 17 correct answers
     1000000    // 18+ correct answers
 ];
-
+// Adjust scoring to reflect properly
 // Initialize high score variable
 let highScore = 0; // This will reset on page refresh
 
